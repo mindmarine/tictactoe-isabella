@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Isabella's Tic Tac Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,8 +10,41 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <style>
+        .dashboard {
+          border: solid green;
+        }
+      </style>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Tic Tac Toe Isabella</h1>
+
+      <div class="dashboard">
+        <h3>We are keeping you in the loop</h3>
+        <p id="message"></p>
+      </div>
+
+    <!-- User actions -->
+    <!-- Sign Up -->
+    <h3>Sign Up</h3>
+    <form id="sign-up">
+      <input name="credentials[email]" type="text" autocomplete="off">
+      <input name="credentials[password]" type="password" autocomplete="off">
+      <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+      <input type="submit" value="Sign Up">
+    </form>
+
+    <!-- Sign In -->
+    <h3>Sign In</h3>
+    <form id="sign-in">
+      <input name="credentials[email]" type="text" autocomplete="off">
+      <input name="credentials[password]" type="password" autocomplete="off">
+      <input type="submit" value="Sign In">
+    </form>
+
+    <!-- Sign Out -->
+    <h3>Sign Out</h3>
+    <button id="sign-out" type="button">Sign Out</button>
+
     </body>
 </html>
