@@ -11,22 +11,21 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
       <style>
-        .dashboard {
-          border: solid green;
-        }
+
+
       </style>
     </head>
     <body>
-      <h1>Tic Tac Toe Isabella</h1>
+      <h1>Tic Tac Toe for Isabella</h1>
 
       <div class="dashboard">
-        <h3>We are keeping you in the loop</h3>
-        <p id="status"></p>
+        <h5>we are keeping you in the loop</h5>
+        <h2 id="status"></h2>
       </div>
 
     <!-- User actions -->
     <!-- Sign Up -->
-    <h3>Sign Up</h3>
+    <!-- <h3>Sign Up</h3> -->
     <form id="sign-up">
       <input name="credentials[email]" type="text" autocomplete="off">
       <input name="credentials[password]" type="password" autocomplete="off">
@@ -35,7 +34,7 @@
     </form>
 
     <!-- Sign In -->
-    <h3>Sign In</h3>
+    <!-- <h3>Sign In</h3> -->
     <form id="sign-in">
       <input name="credentials[email]" type="text" autocomplete="off">
       <input name="credentials[password]" type="password" autocomplete="off">
@@ -43,11 +42,11 @@
     </form>
 
     <!-- Sign Out -->
-    <h3>Sign Out</h3>
+    <!-- <h3>Sign Out</h3> -->
     <button id="sign-out" type="button">Sign Out</button>
 
     <!-- Change password -->
-    <h3>Change password</h3>
+    <!-- <h3>Change password</h3> -->
     <form id="change-password">
       <input name="passwords[old]" type="password">
       <input name="passwords[new]" type="password">
@@ -55,8 +54,32 @@
     </form>
 
     <!-- Game Actions -->
-    <h4>Start Game</h4>
-    <button id="create-game" type="button">Start Game</button>
+    <h4>New Game</h4>
+    <button id="create-game" type="button">Start New Game</button>
+
+    <div class="container-fluid board">
+    <div class="row board-row">
+      <div data-cell-index="0" class="col-4 square"> 0 </div>
+      <div data-cell-index="1" class="col-4 square"> 1 </div>
+      <div data-cell-index="2" class="col-4 square"> 2 </div>
+    </div>
+    <div class="row board-row">
+      <div data-cell-index="3" class="col-4 square"> 3 </div>
+      <div data-cell-index="4" class="col-4 square"> 4 </div>
+      <div data-cell-index="5" class="col-4 square"> 5 </div>
+    </div>
+    <div class="row board-row">
+      <div data-cell-index="6" class="col-4 square"> 6 </div>
+      <div data-cell-index="7" class="col-4 square"> 7 </div>
+      <div data-cell-index="8" class="col-4 square"> 8 </div>
+    </div>
+    </div>
+
+    <!-- <h4>Get Games</h4> -->
+    <button id="get-games" type="button">Get Games</button>
+    <div id="show-games">
+
+    </div>
 
     </body>
 </html>

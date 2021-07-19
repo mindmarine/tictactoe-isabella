@@ -1,9 +1,8 @@
 #!/bin/bash
 
-curl "https://tic-tac-toe-api-production.herokuapp.com/sign-out" \
+curl "https://tic-tac-toe-api-production.herokuapp.com/games" \
   --include \
-  --request DELETE \
-  --header "Content-Type: application/json" \
+  --request GET \
   --header "Authorization: Bearer ${TOKEN}"
 
 echo

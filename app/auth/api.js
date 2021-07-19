@@ -33,7 +33,7 @@ const signOut = function () {
   })
 }
 
-const ChangePassword = function (data) {
+const changePassword = function (data) {
   return $.ajax({
     url: `${appCurrentLink.apiUrl}/change-password`,
     method: 'PATCH',
@@ -44,10 +44,55 @@ const ChangePassword = function (data) {
   })
 }
 
+// games related code
+
+const createGame = function () {
+  // alert('Creating a new game')
+  console.log('Creating a new game')
+  const startGame = {}
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/games`,
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    startGame
+  })
+}
+
+const getGames = function () {
+  console.log('Getting the list of games')
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/games`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    }
+  })
+}
+
+const onBoardMove = function () {
+  console.log('Placing a move')
+}
+
+// const GetGames = function () {
+//   const gamesList = $.ajax({
+//     url: `${appCurrentLink.apiUrl}/games`,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Bearer ' + store.token
+//     }
+//   })
+//   console.log(gamesList)
+// }
+
 // Exports from api.js
 module.exports = {
   signUp: signUp,
   signIn: signIn,
   signOut: signOut,
-  ChangePassword: ChangePassword
+  changePassword: changePassword,
+  createGame: createGame,
+  getGames: getGames,
+  onBoardMove: onBoardMove
 }

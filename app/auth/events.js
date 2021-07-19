@@ -42,9 +42,29 @@ const onChangePassword = function (event) {
   // console.log(form)
   const data = getFormFields(form)
   // console.log(data)
-  api.ChangePassword(data)
+  api.changePassword(data)
     .then(ui.onChangePasswordSuccess)
     .catch(ui.onChangePasswordFailure)
+}
+
+const onCreateGame = function (event) {
+  event.preventDefault()
+  api.createGame()
+    .then(ui.onCreateGameSuccess)
+    .catch(ui.onCreateGameFailure)
+}
+
+const onGetGames = function (event) {
+  event.preventDefault()
+  api.getGames()
+    .then(ui.onGetGamesSuccess)
+    .catch(ui.onGetGamesFailure)
+}
+
+const onBoardMove = function (event) {
+  api.boardMove()
+    .then(ui.onBoardMoveSuccess)
+    .catch(ui.onBoardMoveFailure)
 }
 
 // Exports from events.js
@@ -52,5 +72,9 @@ module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
   onSignOut: onSignOut,
-  onChangePassword: onChangePassword
+  onChangePassword: onChangePassword,
+  // game related code
+  onCreateGame: onCreateGame,
+  onGetGames: onGetGames,
+  onBoardMove: onBoardMove
 }

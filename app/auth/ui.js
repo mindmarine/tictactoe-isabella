@@ -7,6 +7,9 @@ const onSignUpSuccess = function (response) {
   $('#status').text('Thank you for signing up', response.user.email)
   // console.log(response)
   $('sign-up').trigger('reset')
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#sign-out').show()
 }
 
 const onSignUpFailure = function () {
@@ -21,6 +24,10 @@ const onSignInSuccess = function (response) {
   // console.log(response)
   store.token = response.user.token
   $('sign-in').trigger('reset')
+  $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#sign-out').show()
+  $('#create-game').show()
 }
 
 const onSignInFailure = function () {
@@ -31,6 +38,10 @@ const onSignInFailure = function () {
 
 const onSignOutSuccess = function () {
   $('#status').text('Successfully Signed Out')
+  $('#sign-in').show()
+  $('#sign-up').show()
+  $('#sign-out').hide()
+  $('#create-game').hide()
 }
 
 const onSignOutFailure = function () {
@@ -45,7 +56,26 @@ const onChangePasswordFailure = function () {
   $('#status').text('Password change was unsuccessful. Please try again')
 }
 
+// game related code
+const onCreateGameSuccess = function () {
+  $('#status').text('A new game was started'
+  )
+}
+
+const onCreateGameFailure = function () {
+  $('#status').text('We could not create a new game. Please try again')
+}
+
+const onGetGamesSuccess = function (response) {
+  console.log(response)
+}
+
+const onGetGamesFailure = function (response) {
+  $('#status').text('We could not get the lis tof games. Please try again')
+}
+
 module.exports = {
+  // auth
   onSignUpSuccess: onSignUpSuccess,
   onSignUpFailure: onSignUpFailure,
   onSignInSuccess: onSignInSuccess,
@@ -53,5 +83,10 @@ module.exports = {
   onSignOutSuccess: onSignOutSuccess,
   onSignOutFailure: onSignOutFailure,
   onChangePasswordSuccess: onChangePasswordSuccess,
-  onChangePasswordFailure: onChangePasswordFailure
+  onChangePasswordFailure: onChangePasswordFailure,
+  // game
+  onCreateGameSuccess: onCreateGameSuccess,
+  onCreateGameFailure: onCreateGameFailure,
+  onGetGamesSuccess: onGetGamesSuccess,
+  onGetGamesFailure: onGetGamesFailure
 }

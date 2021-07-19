@@ -10,12 +10,15 @@ const apiUrl = require('./config')
 // console.log(apiUrl)
 
 const authEvents = require('./auth/events.js')
-const gameEvents = require('./game/events.js')
+// const gameEvents = require('./game/events.js')
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('create-game').on('click', gameEvents.onStartGame)
+  // game related calls
+  $('#create-game').on('click', authEvents.onCreateGame)
+  $('#get-games').on('click', authEvents.onGetGames)
+  $('board').on('click', auth)
 })
