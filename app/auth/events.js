@@ -150,7 +150,7 @@ const checkIfWeHaveAWinner = function (gameProgress) {
 
   // check first diagonal
   for (let d = 0; d < 3; d++) {
-    checkArray[d - 1] = gameProgress[(d - 1) * 3 + d]
+    checkArray[d] = gameProgress[d === 0 ? 0 : Math.pow(2, d + 1)]
   }
   if (Math.abs(sumArray(checkArray)) === 3) {
     storeGameUpdate()
