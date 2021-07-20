@@ -96,7 +96,7 @@ const boardMove = function () {
           index: `${store.boardCell}`,
           value: `${store.move}`
         },
-        over: false
+        over: store.gameOnOff
       }
     }
   })

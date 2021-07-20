@@ -32,3 +32,13 @@ $("a[data-spinner='true']").click(function() {
     // Do more Action
 });
 */
+
+// game logic
+
+// create an array in store to facilitate game logic
+// if a board cell is not occupied store move. if it is occupied err
+// if a move is allowed
+// store move
+// check for game situations
+// did anyone win? Yes/ No Who Won?
+// is it the end of the game? Is it a tie?

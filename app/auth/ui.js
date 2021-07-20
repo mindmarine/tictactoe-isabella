@@ -59,9 +59,19 @@ const onChangePasswordFailure = function () {
 // game related code
 const onCreateGameSuccess = function (response) {
   $('#status').text('A new game was started')
+  $('.square').html('')
   // console.log(response)
   // console.log(response.game._id)
   store.gameId = response.game._id
+  store.gameProgress = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  store.players = ['X', 'O']
+  store.currentPlayer = ''
+  store.boardCell = ''
+  store.gameMoves = 0
+  store.gameStatus = 'Tie'
+  store.gameOnOff = true
+  store.gameXWins = 0
+  store.gameOWins = 0
   // console.log(store.token, store.gameID)
 }
 
@@ -82,6 +92,17 @@ const onBoardMoveSuccess = function () {
   // console.log(`Player ${store.move} move is ${store.boardCell}`)
   // console.log(store.boardCell)
   $(`[data-cell-index=${store.boardCell}]`).html(`<p>${store.move}</p>`) // currently working
+
+  // check if the game is a tie and display this while updating the score
+  if (store.gameMoves === 9) {
+    $('#status').text(store.gameStatus)
+    store.gameXWins += 0.5
+    store.gameOWins += 0.5
+  }
+
+  if (!store.gameOnOff) {
+    $('#status').text(store.gameStatus)
+  }
 }
 
 const onBoardMoveFailure = function () {
