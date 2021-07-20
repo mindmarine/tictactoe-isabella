@@ -13,6 +13,7 @@ h1 {
 }
 
 .square {
+  display: flex;
   border: solid black;
   border-radius: 10px;
   max-width: 150px;
@@ -20,9 +21,11 @@ h1 {
   height: 150px;
   background-color: orange;
   align-content: center;
+  font-size: 60px;
 }
 
 .board {
+  margin: auto;
   height: 450px;
   align-self: center;
 }

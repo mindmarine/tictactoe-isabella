@@ -81,7 +81,7 @@ const onBoardMoveSuccess = function () {
   // console.log('In onBoardMoveSuccess')
   // console.log(`Player ${store.move} move is ${store.boardCell}`)
   // console.log(store.boardCell)
-  $(`[data-cell-index=${store.boardCell}]`).html(`<p>${store.move}</p>`) // currently not working
+  $(`[data-cell-index=${store.boardCell}]`).html(`<p>${store.move}</p>`) // currently working
 }
 
 const onBoardMoveFailure = function () {

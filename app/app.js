@@ -6,7 +6,7 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-const apiUrl = require('./config')
+// const apiUrl = require('./config')
 // console.log(apiUrl)
 
 const authEvents = require('./auth/events.js')

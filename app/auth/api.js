@@ -73,6 +73,17 @@ const getGames = function () {
 
 const boardMove = function () {
   console.log('In Board move')
+
+  /* check if the move is possible
+   get game id
+  */
+  // const gameStatus = getGameStatus(store.gameId)
+  // console.log('game status is ', gameStatus)
+  // console.log('game status is ', gameStatus.getAllResponseHeaders)
+  // console.log('game status is ', gameStatus.responseText)
+
+  console.log(store)
+
   return $.ajax({
     url: `${appCurrentLink.apiUrl}/games/${store.gameId}`,
     method: 'PATCH',
@@ -91,7 +102,21 @@ const boardMove = function () {
   })
 }
 
-// const GetGames = function () {
+/* START
+// getGameStatus via API
+
+const getGameStatus = function (gameId) {
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/games/${store.gameId}`,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    }
+  })
+}
+END */
+
+// const getGames = function () {
 //   const gamesList = $.ajax({
 //     url: `${appCurrentLink.apiUrl}/games`,
 //     method: 'GET',

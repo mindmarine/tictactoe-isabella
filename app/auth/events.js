@@ -70,15 +70,23 @@ const onBoardMove = function (event) {
   // console.log('Board cell is', boardCell)
   store.boardCell = boardCell
   // console.log(store.boardCell)
-  if (store.gameMoves === undefined) {
-    store.gameMoves = 1
-  } else store.gameMoves += 1
-  if (store.gameMoves % 2 === 0) {
-    store.player = 2
-    store.move = 'O'
+  if (store.gameProgress[store.boardCell]) {
+    alert('Move taken')
+    $(`[data-cell-index=${store.boardCell}]`).css('background-color', 'red')
   } else {
-    store.player = 1
-    store.move = 'X'
+    if (store.gameMoves === undefined) {
+      store.gameMoves = 1
+    } else store.gameMoves += 1
+
+    if (store.gameMoves % 2 === 0) {
+      store.player = 2
+      store.move = 'O'
+      store.gameProgress[store.boardCell] = -1
+    } else {
+      store.player = 1
+      store.move = 'X'
+      store.gameProgress[store.boardCell] = 1
+    }
   }
   console.log(store)
   // console.log(boardEvent)
