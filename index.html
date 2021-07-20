@@ -16,76 +16,77 @@
       </style>
     </head>
     <body>
-    <!-- Start of the container div -->
-      <div class="container">
-
-        <!-- Game Title -->
-        <div class="top">
-          <h1>Tic Tac Toe for Isabella</h1>
-        </div>
-
-        <!-- Auth & dashboard -->
-        <div class="auth-dash">
-          <div class="dashboard">
-            <h5>we are keeping you in the loop</h5>
-            <h2 id="status"></h2>
-          </div>
-
-          <!-- User actions -->
-
-          <!-- Navigation -->
-          <div class="navigation">
-          <!-- Sign Up -->
-          <!-- <h3>Sign Up</h3> -->
-          <form id="sign-up">
-            <!-- <label class="form-label">your username</label> -->
-            <input name="credentials[email]" type="text" value="your email" autocomplete="off">
-            <input name="credentials[password]" type="password" autocomplete="off">
-            <input name="credentials[password_confirmation]" type="password" autocomplete="off">
-            <input type="submit" value="Sign Up" class="nav-button">
-          </form>
-
-          <!-- Sign In -->
-          <!-- <h3>Sign In</h3> -->
-          <form id="sign-in">
-            <input name="credentials[email]" type="text" autocomplete="off">
-            <input name="credentials[password]" type="password" autocomplete="off">
-            <input type="submit" value="Sign In" class="nav-button">
-          </form>
-
-          <!-- Sign Out -->
-          <!-- <h3>Sign Out</h3> -->
-          <div id="support-sign-out">
-            <button id="sign-out" type="button" class="nav-button">Sign Out</button>
-          </div>
-
-          <!-- Change password -->
-          <!-- <h3>Change password</h3> -->
-          <form id="change-password">
-            <input name="passwords[old]" type="password">
-            <input name="passwords[new]" type="password">
-            <input type="submit" value="Change password" class="nav-button">
-          </form>
-
-          <!-- Game Actions -->
-
-          <!-- <h4>Get Games</h4> -->
-          <button id="get-games" type="button" class="nav-button">Get Games</button>
-          <div id="show-games">
-
-            <!-- <h4>New Game</h4> -->
-            <button id="create-game" type="button" class="nav-button">Start New Game</button>
-          </div>
-      <!-- End div Auth & dashboard -->
-      </div>
-      </div>
-
-
 
     <!-- Start of the board -->
     <div class="board">
     <div class="row board-row">
-      <div data-cell-index="0" class="col-4 square"> 0 </div>
+
+      <div class="col-4 square">
+        <!-- Sign Up -->
+        <!-- <h3>Sign Up</h3> -->
+        <form id="sign-up">
+          <!-- <label class="form-label">your username</label> -->
+          <input name="credentials[email]" type="text" value="your email" autocomplete="off">
+          <input name="credentials[password]" type="password" autocomplete="off">
+          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+          <input type="submit" value="Sign Up" class="nav-button">
+        </form>
+      </div>
+
+      <div class="col-4 square">
+        <div class="dashboard">
+          <h5>we are keeping you in the loop</h5>
+          <h2 id="status"></h2>
+        </div>
+
+        <!-- Game Title -->
+        <div class="top">
+          <ul>
+            <li id="x-player">X Score: </li>
+            <li>Tic Tac Toe for Isabella</li>
+            <li id="o-playet">O Score: </li>
+          </ul>
+        </div>
+
+        <!-- Game Actions -->
+
+        <!-- <h4>Get Games</h4> -->
+        <button id="get-games" type="button" class="nav-button">Get Games</button>
+
+        <!-- <h4>New Game</h4> -->
+        <div id="show-games">
+          <button id="create-game" type="button" class="nav-button">Start New Game</button>
+        </div>
+
+      </div>
+
+      <div class="col-4 square">
+        <!-- Sign In -->
+        <!-- <h3>Sign In</h3> -->
+        <form id="sign-in">
+          <input name="credentials[email]" type="text" autocomplete="off">
+          <input name="credentials[password]" type="password" autocomplete="off">
+          <input type="submit" value="Sign In" class="nav-button">
+        </form>
+
+        <!-- Sign Out -->
+        <!-- <h3>Sign Out</h3> -->
+        <div id="support-sign-out">
+          <button id="sign-out" type="button" class="nav-button">Sign Out</button>
+        </div>
+
+        <!-- Change password -->
+        <!-- <h3>Change password</h3> -->
+        <form id="change-password">
+          <input name="passwords[old]" type="password">
+          <input name="passwords[new]" type="password">
+          <input type="submit" value="Change password" class="nav-button">
+        </form>
+      </div>
+    </div>
+
+    <div class="row board-row">
+      <div data-cell-index="0" class="col-4 square"> <h6>0</h6></div>
       <div data-cell-index="1" class="col-4 square"> 1 </div>
       <div data-cell-index="2" class="col-4 square"> 2 </div>
     </div>
@@ -101,7 +102,5 @@
     </div>
     </div>
 
-    </div>
-    <!-- End of the container div -->
     </body>
 </html>

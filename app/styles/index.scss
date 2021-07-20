@@ -5,78 +5,85 @@
     padding: 0;
 }
 
-body {
-  overflow: hidden;
+.body {
+  background-color: green;
 }
 
-.container {
-  flex: display;
+.board {
+  display: flex;
   flex-direction: column;
-  background-color: grey;
-  min-height: 100%;
-  min-width: 100%;
-  // max-width: calc(max(vh,hh));
+  background-color: white;
+  align-content: center;
+  margin: 20px;
 }
 
-.top {
-  flex: 1;
+.board-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  // https://www.quirksmode.org/css/units-values/viewport.html
+  // min-height: calc(100%vmin/4);
+  // min-width: calc(100%vmin/4);
+
+  align-content: center;
 }
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   max-width: 100vh;
-// }
-
-.dashboard {
+.square {
   border: solid black;
   border-radius: 10px;
-  color: green;
-  text-align: center;
+  min-height: 200px;
+  // min-height: calc(100%vh/4);
+  // max-width: 200px;
+  // min-width: 200px;
+  // min-height: calc(100%vmin/4);
+  background-color: orange;
+  font-size: 100%;
+  user-select: none;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  // flex-wrap: wrap;
-  align-content: center;
-  align-self: flex-end;
+.dashboard {
+  // border: solid black;
+  // border-radius: 10px;
+  color: black;
+  text-align: center;
 }
 
 #sign-up {
   display: flex;
   flex-direction: column;
   // border-radius: 10px;
-  min-width: calc(100%/4);
+  // min-width: calc(100%/4);
+  margin-top: 10px;
 }
 
 #sign-in {
   display: flex;
   flex-direction: column;
   // border-radius: 10px;
-  min-width: calc(100%/4);
+  // min-width: calc(100%/4);
+  margin-top: 10px;
 }
 
 #support-sign-out {
   display: flex;
   flex-direction: column;
   // border-radius: 10px;
-  min-width: calc(100%/4);
+  // min-width: calc(100%/4);
 }
 
 #change-password {
   display: flex;
   flex-direction: column;
-  min-width: calc(100%/4);
+  // min-width: calc(100%/4);
 }
 
 .nav-button {
   background-color: orange;
   border: 2px solid black;
-  border-radius: 30px;
-  min-height: 60px;
-  font-size: calc(100%/2*3);
+  border-radius: 30%;
+  min-height: 20px;
+  // font-size: calc(100%/2*3);
 }
 
 h1 {
@@ -87,35 +94,28 @@ h1 {
   margin: 0;
 }
 
-.board {
-  flex-direction: row;
-  height: calc(vh * 3 / 4);
-  align-content: center;
+#sign-out {
+  // display: none;
 }
 
-.square {
-  border: solid black;
-  border-radius: 10px;
-  min-height: 100px;
-  // max-width: 250px;
-  // min-width: 200px;
-  height: calc(100%/3);
-  background-color: orange;
-  align-content: center;
-  font-size: 60px;
-  user-select: none;
+#change-password{
+  // display: none;
 }
 
 #create-game {
-  display: none;
+  // display: none;
 }
 
 #get-games {
-  display: none;
+  // display: none;
 }
 
 .form-label {
   display: inline-block;
   width: 150;
   text-align: right;
+}
+
+h6 {
+  margin: auto;
 }
