@@ -59,7 +59,7 @@ const onChangePasswordFailure = function () {
 // game related code
 const onCreateGameSuccess = function (response) {
   $('#status').text('A new game was started')
-  $('.square').text('')
+  $('.game-cell').text('')
   // $('.board').show()
   // console.log(response)
   // console.log(response.game._id)
