@@ -7,7 +7,7 @@ const onSignUpSuccess = function (response) {
   $('#status').text('Thank you for signing up', response.user.email)
   // console.log(response)
   $('sign-up').trigger('reset')
-  $('#sign-in').hide()
+  $('#sign-in').show()
   $('#sign-up').hide()
   $('#sign-out').show()
 }
@@ -57,9 +57,12 @@ const onChangePasswordFailure = function () {
 }
 
 // game related code
-const onCreateGameSuccess = function () {
-  $('#status').text('A new game was started'
-  )
+const onCreateGameSuccess = function (response) {
+  $('#status').text('A new game was started')
+  // console.log(response)
+  // console.log(response.game._id)
+  store.gameId = response.game._id
+  // console.log(store.token, store.gameID)
 }
 
 const onCreateGameFailure = function () {
@@ -72,6 +75,17 @@ const onGetGamesSuccess = function (response) {
 
 const onGetGamesFailure = function (response) {
   $('#status').text('We could not get the lis tof games. Please try again')
+}
+
+const onBoardMoveSuccess = function () {
+  // console.log('In onBoardMoveSuccess')
+  // console.log(`Player ${store.move} move is ${store.boardCell}`)
+  // console.log(store.boardCell)
+  $(`[data-cell-index=${store.boardCell}]`).html(`<p>${store.move}</p>`) // currently not working
+}
+
+const onBoardMoveFailure = function () {
+  $('#status').text('We could not make a board move')
 }
 
 module.exports = {
@@ -88,5 +102,7 @@ module.exports = {
   onCreateGameSuccess: onCreateGameSuccess,
   onCreateGameFailure: onCreateGameFailure,
   onGetGamesSuccess: onGetGamesSuccess,
-  onGetGamesFailure: onGetGamesFailure
+  onGetGamesFailure: onGetGamesFailure,
+  onBoardMoveSuccess: onBoardMoveSuccess,
+  onBoardMoveFailure: onBoardMoveFailure
 }

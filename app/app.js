@@ -20,5 +20,15 @@ $(() => {
   // game related calls
   $('#create-game').on('click', authEvents.onCreateGame)
   $('#get-games').on('click', authEvents.onGetGames)
-  $('board').on('click', auth)
+  // $('.row').on('click', authEvents.onBoardMove)
+  $('.board-row > *').on('click', authEvents.onBoardMove)
 })
+
+/*
+
+The following code binds click event to all <a> elements which have data-spinner attribute equal to true:
+
+$("a[data-spinner='true']").click(function() {
+    // Do more Action
+});
+*/

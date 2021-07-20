@@ -4,6 +4,7 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('./../store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -62,6 +63,28 @@ const onGetGames = function (event) {
 }
 
 const onBoardMove = function (event) {
+  // console.log('On board move')
+  // console.log(event)
+  const boardEvent = event.target
+  const boardCell = boardEvent.getAttribute('data-cell-index')
+  // console.log('Board cell is', boardCell)
+  store.boardCell = boardCell
+  // console.log(store.boardCell)
+  if (store.gameMoves === undefined) {
+    store.gameMoves = 1
+  } else store.gameMoves += 1
+  if (store.gameMoves % 2 === 0) {
+    store.player = 2
+    store.move = 'O'
+  } else {
+    store.player = 1
+    store.move = 'X'
+  }
+  console.log(store)
+  // console.log(boardEvent)
+  // console.log(boardEvent.type())
+  // const boardID = boardEvent.lastIndexOf('id', 1)
+  // console.log(boardID)
   api.boardMove()
     .then(ui.onBoardMoveSuccess)
     .catch(ui.onBoardMoveFailure)

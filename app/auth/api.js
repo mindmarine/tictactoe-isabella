@@ -71,8 +71,24 @@ const getGames = function () {
   })
 }
 
-const onBoardMove = function () {
-  console.log('Placing a move')
+const boardMove = function () {
+  console.log('In Board move')
+  return $.ajax({
+    url: `${appCurrentLink.apiUrl}/games/${store.gameId}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.token
+    },
+    data: {
+      game: {
+        cell: {
+          index: `${store.boardCell}`,
+          value: `${store.move}`
+        },
+        over: false
+      }
+    }
+  })
 }
 
 // const GetGames = function () {
@@ -94,5 +110,5 @@ module.exports = {
   changePassword: changePassword,
   createGame: createGame,
   getGames: getGames,
-  onBoardMove: onBoardMove
+  boardMove: boardMove
 }
