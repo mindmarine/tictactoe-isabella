@@ -81,6 +81,16 @@ const onBoardMove = function (event) {
   }
 }
 
+const checkGameProgress = function (move) {
+  let valueOfTheMove = 0
+  if (move === 'X') {
+    valueOfTheMove = 1
+  } else {
+    valueOfTheMove = -1
+  }
+  return valueOfTheMove
+}
+
 const gameLogic = function (boardCell) {
   store.boardCell = boardCell
   // console.log(store.boardCell)
@@ -91,16 +101,26 @@ const gameLogic = function (boardCell) {
     return false // return if the move is not possible
   }
 
+  // sudo code
+  // logic that combines the starting player with the player next move
+  // add the index of starting player from the store.players array to the current move
+
   // if the move is possible
   store.gameMoves += 1
   if (store.gameMoves % 2 === 0) {
     store.player = 2
-    store.move = 'O'
-    store.gameProgress[boardCell] = -1
+    // what is next move?
+    // this is the player that does the even moves
+    store.move = 'O' // initial  code
+    store.move = store.newGameSecondPlayer
+    store.gameProgress[boardCell] = checkGameProgress(store.move)
   } else {
     store.player = 1
-    store.move = 'X'
-    store.gameProgress[boardCell] = 1
+    // what is the next move ?
+    // this is the player that does the odd moves
+    store.move = 'X' // initial  code
+    store.move = store.newGameFirstPlayer // switch players code
+    store.gameProgress[boardCell] = checkGameProgress(store.move)
   }
 
   const checkGameStatus = checkIfWeHaveAWinner(store.gameProgress)

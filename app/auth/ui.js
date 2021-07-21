@@ -25,9 +25,9 @@ const onSignInSuccess = function (response) {
   store.token = response.user.token
   store.gamesPlayed = 0
   store.players = ['X', 'O']
-  store.currentPlayer = store.players[0]
   store.gameXWins = 0
   store.gameOWins = 0
+  store.newGameStartingPlayerToggle = 0
   $('sign-in').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -74,7 +74,11 @@ const onCreateGameSuccess = function (response) {
   store.gameMoves = 0
   store.gameStatus = 'Tie'
   store.gameOnOff = true
-  // console.log(store.token, store.gameID)
+  store.newGameFirstPlayerToggle = store.gamesPlayed % 2
+  store.newGameSecondPlayerToggle = 1 - (store.gamesPlayed % 2)
+  store.newGameFirstPlayer = store.players[store.newGameFirstPlayerToggle]
+  store.newGameSecondPlayer = store.players[store.newGameSecondPlayerToggle]
+  console.log(store)
 }
 
 const onCreateGameFailure = function () {
