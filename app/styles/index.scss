@@ -1,6 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
+// color scheme
+// https://www.colorcombos.com/color-schemes/374/ColorCombo374.html
+
 
 * {
     margin: 0;
@@ -43,6 +46,11 @@
   background-color: orange;
   font-size: 100%;
   user-select: none;
+}
+
+.game-cell:hover {
+  background-color:teal;
+  color: white;
 }
 
 .dashboard {
@@ -90,24 +98,33 @@
   // font-size: calc(100%/2*3);
 }
 
+.nav-button:hover {
+  background-color: teal;
+  color: white;
+  border: 2px solid white;
+}
+
 h1 {
   background-color: transparent;
   max-width: 100%;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: black;
   margin: 0;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bolder;
 }
 
-h2 {
+h6 {
   background-color: transparent;
   max-width: 100%;
   text-align: center;
-  font-style: italic;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  // font-style: italic;
 }
 .tips {
   font-weight: bold;
-
+  font-style: italic;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 span {
@@ -120,11 +137,12 @@ span {
   display: flex;
   flex-direction: row;
   align-content: center;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 ul {
   list-style-type: none;
-
+  align-items: center;
   margin: auto;
 }
 
