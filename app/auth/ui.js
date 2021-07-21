@@ -139,7 +139,7 @@ const onBoardMoveSuccess = function () {
   }
   $('.score').html(`
     <p id="x-player" class="score-details" >X Score: ${store.gameXWins}</p>
-    <p class="score-details" > --- </p>
+    <p class="score-details" > &nbsp | &nbsp </p>
     <p id="o-player" class="score-details" >O Score: ${store.gameOWins}</p>
   `)
 }
