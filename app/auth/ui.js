@@ -93,7 +93,7 @@ const onBoardMoveSuccess = function () {
   // console.log('In onBoardMoveSuccess')
   // console.log(`Player ${store.move} move is ${store.boardCell}`)
   // console.log(store.boardCell)
-  $(`[data-cell-index=${store.boardCell}]`).html(`<p>${store.move}</p>`) // currently working
+  $(`[data-cell-index=${store.boardCell}]`).html(`<p class="move-decoration">${store.move}</p>`) // currently working
 
   // check if the game is a tie and display this while updating the score
   if (store.gameMoves === 9) {

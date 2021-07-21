@@ -29,9 +29,8 @@ const gameTips = function () {
   }
 }
 
-gameTips()
-
 $(() => {
+  gameTips()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
@@ -42,15 +41,6 @@ $(() => {
   // $('.row').on('click', authEvents.onBoardMove)
   $('.board-row > *').on('click', authEvents.onBoardMove)
 })
-
-/*
-
-The following code binds click event to all <a> elements which have data-spinner attribute equal to true:
-
-$("a[data-spinner='true']").click(function() {
-    // Do more Action
-});
-*/
 
 // game logic
 
