@@ -81,6 +81,34 @@ html body {
   font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.dashboard-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.dashboard-start {
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: stretch;
+  // color: cyan;
+}
+
+#winner-celebration {
+  background-image: "public/images/fireworks01.gif";
+  max-width: 70%;
+  justify-content: center;
+}
+
+.score-details {
+  display: flex;
+
+}
+
 #sign-up {
   display: flex;
   flex-direction: column;
@@ -161,16 +189,6 @@ span {
   font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-ul {
-  list-style-type: none;
-  align-items: center;
-  margin: auto;
-}
-
-li {
-  align-content: space-between;
-}
-
 #sign-out {
   display: none;
 }
@@ -183,7 +201,7 @@ li {
   display: none;
 }
 
-#get-games {
+#all-games {
   display: none;
 }
 
@@ -195,4 +213,9 @@ li {
 
 h6 {
   margin: auto;
+}
+
+
+.dashboard {
+  background-image: "public/images/fireworks01.gif";
 }

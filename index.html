@@ -28,29 +28,27 @@
           <h5 class="breaking news">BREAKING NEWS</h5>
           <h2 id="status"></h2>
         </div>
+
+        <!-- <div class="celebration">
+          <img id="winner-celebration" src="public/images/fireworks01.gif">
+        </div> -->
+
+        <!-- <div class="dashboard-start">
+          <img class="dashboard-image" src="/public/images/general_assembly_logo.jpeg" alt="General Assembly Logo" >
+          <p>SEI JuneBugs Project 1 Presentation</p>
+        </div> -->
       </div>
 
       <div class="col-4 square">
+        <!-- Game Title -->
         <h1>Tic Tac Toe</h1>
         <h6>for Isabella</h6>
 
-        <!-- Game Title -->
+        <!-- Game Score -->
         <div class="score">
-          <ul>
-            <li id="x-player">X Score: 0</li>
-            <li> --- </li>
-            <li id="o-player">O Score: 0</li>
-          </ul>
-        </div>
-
-        <!-- Game Actions -->
-
-        <!-- <h4>Get Games</h4> -->
-        <button id="get-games" type="button" class="nav-button">Get Games</button>
-
-        <!-- <h4>New Game</h4> -->
-        <div id="show-games">
-          <button id="create-game" type="button" class="nav-button">Start New Game</button>
+          <p id="x-player" class="score-details" >X Score: 0</p>
+          <p class="score-details" >&nbsp | &nbsp</p>
+          <p id="o-player" class="score-details" >O Score: 0</p>
         </div>
 
       </div>
@@ -82,11 +80,26 @@
 
         <!-- Change password -->
         <!-- <h3>Change password</h3> -->
+        <div id="change-pw">
         <form id="change-password">
-          <input name="passwords[old]" type="password">
-          <input name="passwords[new]" type="password">
+          <input name="passwords[old]" type="password" autocomplete="off">
+          <input name="passwords[new]" type="password" autocomplete="off">
           <input type="submit" value="Change password" class="nav-button">
         </form>
+        </div>
+
+        <!-- Game Actions -->
+
+        <!-- <h4>Get All Games</h4> -->
+        <div id="showcase-all-games">
+          <button id="all-games" type="button" class="nav-button">Get Games</button>
+        </div>
+
+
+        <!-- <h4>New Game</h4> -->
+        <div id="show-create-game">
+          <button id="create-game" type="button" class="nav-button">Start New Game</button>
+        </div>
       </div>
     </div>
 
