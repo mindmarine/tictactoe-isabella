@@ -19,6 +19,7 @@ html body {
   flex-direction: column;
   // background-color: white;
   align-content: center;
+  height: 100vh; // make container take the entire height of viewport
   margin: 20px;
 }
 
@@ -59,12 +60,14 @@ html body {
 }
 
 .move-decoration {
+  display: flex;
   margin: 0;
   padding: 0;
-  align-self: center;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: calc(100vh/6 - 20px);
+  font-size: calc(100vh/6 - 30px);
 }
 
 .dashboard {
