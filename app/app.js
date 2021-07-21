@@ -12,6 +12,25 @@
 const authEvents = require('./auth/events.js')
 // const gameEvents = require('./game/events.js')
 
+const gameTips = function () {
+  const tips = [
+    'You will need to sign up/sign in first!<br> <span>7 Steps for a successful TicTacToe career</span>',
+    '1) Press on <span>a new game</span> and place your symbol on the board. A good tip is to <span>start in the middle</span> of the board',
+    '2) The second player comes next. Plan  and yes let us use a big word <span>strategize your next move</span>',
+    '3) Practice! Practice! Practice! is the way for any developer but also for a TicTacToe player',
+    '4) ',
+    '5) ',
+    '6) ',
+    '7) ',
+    'Have fun! © 2021 github.com/mindmarine <br> Sources: Stephen R Covey google, wikihow'
+  ]
+  for (let tip = 0; tip < 9; tip++) {
+    $(`[data-cell-index=${tip}]`).html(`<p class="tips">${tips[tip]}</p>`)
+  }
+}
+
+gameTips()
+
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)

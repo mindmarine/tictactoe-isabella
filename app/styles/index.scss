@@ -1,4 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 
 * {
     margin: 0;
@@ -33,6 +35,7 @@
   border: solid black;
   border-radius: 10px;
   min-height: 200px;
+  padding: 10px;
   // min-height: calc(100%vh/4);
   // max-width: 200px;
   // min-width: 200px;
@@ -81,33 +84,68 @@
 .nav-button {
   background-color: orange;
   border: 2px solid black;
-  border-radius: 30%;
-  min-height: 20px;
+  border-radius: 10px;
+  min-height: 18px;
+  min-width: 100%
   // font-size: calc(100%/2*3);
 }
 
 h1 {
-  background-color: black;
+  background-color: transparent;
   max-width: 100%;
   text-align: center;
-  color: orange;
+  color: rgb(255, 255, 255);
   margin: 0;
+  font-weight: bolder;
+}
+
+h2 {
+  background-color: transparent;
+  max-width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+.tips {
+  font-weight: bold;
+
+}
+
+span {
+  font-size: 150%;
+  font-style: italic;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+ul {
+  list-style-type: none;
+
+  margin: auto;
+}
+
+li {
+  align-content: space-between;
 }
 
 #sign-out {
-  // display: none;
+  display: none;
 }
 
 #change-password{
-  // display: none;
+  display: none;
 }
 
 #create-game {
-  // display: none;
+  display: none;
 }
 
 #get-games {
-  // display: none;
+  display: none;
 }
 
 .form-label {

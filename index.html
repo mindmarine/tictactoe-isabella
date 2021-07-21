@@ -22,29 +22,24 @@
     <div class="row board-row">
 
       <div class="col-4 square">
-        <!-- Sign Up -->
-        <!-- <h3>Sign Up</h3> -->
-        <form id="sign-up">
-          <!-- <label class="form-label">your username</label> -->
-          <input name="credentials[email]" type="text" value="your email" autocomplete="off">
-          <input name="credentials[password]" type="password" autocomplete="off">
-          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
-          <input type="submit" value="Sign Up" class="nav-button">
-        </form>
+        <div class="dashboard">
+          <h5>App & Game Dashboard</h5>
+          <p class="kepp-loop">keeping you in the loop</p>
+          <h5 class="breaking news">BREAKING NEWS</h5>
+          <h2 id="status"></h2>
+        </div>
       </div>
 
       <div class="col-4 square">
-        <div class="dashboard">
-          <h5>we are keeping you in the loop</h5>
-          <h2 id="status"></h2>
-        </div>
+        <h1>Tic Tac Toe</h1>
+        <h2>for Isabella</h2>
 
         <!-- Game Title -->
-        <div class="top">
+        <div class="score">
           <ul>
-            <li id="x-player">X Score: </li>
-            <li>Tic Tac Toe for Isabella</li>
-            <li id="o-playet">O Score: </li>
+            <li id="x-player">X Score: 0</li>
+            <li> --- </li>
+            <li id="o-player">O Score: 0</li>
           </ul>
         </div>
 
@@ -61,6 +56,16 @@
       </div>
 
       <div class="col-4 square">
+        <!-- Sign Up -->
+        <!-- <h3>Sign Up</h3> -->
+        <form id="sign-up">
+          <!-- <label class="form-label">your username</label> -->
+          <input name="credentials[email]" type="text" value="your email" autocomplete="off">
+          <input name="credentials[password]" type="password" autocomplete="off">
+          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+          <input type="submit" value="Sign Up" class="nav-button">
+        </form>
+
         <!-- Sign In -->
         <!-- <h3>Sign In</h3> -->
         <form id="sign-in">

@@ -23,6 +23,11 @@ const onSignInSuccess = function (response) {
   $('#status').text('Thank you for signing in', response.user.email)
   // console.log(response)
   store.token = response.user.token
+  store.gamesPlayed = 0
+  store.players = ['X', 'O']
+  store.currentPlayer = store.players[0]
+  store.gameXWins = 0
+  store.gameOWins = 0
   $('sign-in').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
@@ -65,14 +70,10 @@ const onCreateGameSuccess = function (response) {
   // console.log(response.game._id)
   store.gameId = response.game._id
   store.gameProgress = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-  store.players = ['X', 'O']
-  store.currentPlayer = ''
   store.boardCell = ''
   store.gameMoves = 0
   store.gameStatus = 'Tie'
   store.gameOnOff = true
-  store.gameXWins = 0
-  store.gameOWins = 0
   // console.log(store.token, store.gameID)
 }
 
@@ -85,7 +86,7 @@ const onGetGamesSuccess = function (response) {
 }
 
 const onGetGamesFailure = function (response) {
-  $('#status').text('We could not get the lis tof games. Please try again')
+  $('#status').text('We could not get the list of games. Please try again')
 }
 
 const onBoardMoveSuccess = function () {
@@ -104,6 +105,13 @@ const onBoardMoveSuccess = function () {
   if (!store.gameOnOff) {
     $('#status').text(store.gameStatus)
   }
+  $('.score').html(`
+    <ul>
+      <li id="x-player">X Score: ${store.gameXWins}</li>
+      <li> --- </li>
+      <li id="o-player">O Score: ${store.gameOWins}</li>
+    </ul>
+  `)
 }
 
 const onBoardMoveFailure = function () {

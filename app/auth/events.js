@@ -179,6 +179,8 @@ const storeGameUpdate = function () {
   store.gameStatus = `Player ${store.move} is the winner`
   store.gameOnOff = !store.gameOnOff
   store[`game${store.move}Wins`] += 1
+  store.gamesPlayed += 1 // increase the number of games played
+  store.currentPlayer = store.players[store.gamesPlayed % 2] // switch starting player for next game
 }
 
 // Exports from events.js
