@@ -91,6 +91,8 @@ const checkGameProgress = function (move) {
   return valueOfTheMove
 }
 
+// game Logic
+
 const gameLogic = function (boardCell) {
   store.boardCell = boardCell
   // console.log(store.boardCell)
