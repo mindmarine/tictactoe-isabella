@@ -15,7 +15,6 @@ const tips = require('./gametips.js')
 
 $(() => {
   tips.gameTips()
-  $('#status').text('SEI JuneBugs First Project Presentations')
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
