@@ -1,4 +1,4 @@
-# The complete app can be found here
+# App Web
 [Tic Tac Toe Isabella](https://mindmarine.github.io/tictactoe-isabella/)
 
 # Objective
