@@ -96,8 +96,8 @@ const onCreateGameSuccess = function (response) {
   store.newGameSecondPlayerToggle = 1 - (store.gamesStarted % 2)
   store.newGameFirstPlayer = store.players[store.newGameFirstPlayerToggle]
   store.newGameSecondPlayer = store.players[store.newGameSecondPlayerToggle]
-  console.log(store)
   store.gamesStarted = store.gamesStarted + 1
+  console.log(store)
 }
 
 const onCreateGameFailure = function () {
