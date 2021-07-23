@@ -1,3 +1,6 @@
+# The complete app can be found here
+[Tic Tac Toe Isabella] (https://mindmarine.github.io/tictacttoe-isabella/)
+
 # Objective
 
 Create a game for Isabella to improve her Tic Tac Toe skills so she could spend more time playing this game with her daughter at a competitive level

@@ -7,7 +7,7 @@ const onSignUpSuccess = function (response) {
   // console.log('Super')
   $('#status').text('Thank you for signing up', response.user.email)
   // console.log(response)
-  $('sign-up').trigger('reset')
+  $('#sign-up').trigger('reset')
   $('#sign-in').show()
   $('#sign-up').hide()
   $('#sign-out').hide()
@@ -29,7 +29,7 @@ const onSignInSuccess = function (response) {
   store.gameXWins = 0
   store.gameOWins = 0
   store.newGameStartingPlayerToggle = 0
-  $('sign-in').trigger('reset')
+  $('#sign-in').trigger('reset')
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-out').show()
@@ -66,6 +66,7 @@ const onSignOutFailure = function () {
 
 const onChangePasswordSuccess = function () {
   $('#status').text('You have changed your password. Please remember the new password')
+  $('#change-password').trigger('reset')
 }
 
 const onChangePasswordFailure = function () {
@@ -119,7 +120,10 @@ const onBoardMoveSuccess = function () {
     $('#status').text(store.gameStatus)
     store.gameXWins += 0.5
     store.gameOWins += 0.5
+    store.gamesPlayed += 1 // adding one line of code to advance the total number of games played even if the game is a tie
   }
+
+  // game is in progress or ended... aka game is on or off
 
   if (!store.gameOnOff) {
     $('#status').text(store.gameStatus)
