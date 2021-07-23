@@ -1,5 +1,5 @@
 # The complete app can be found here
-[Tic Tac Toe Isabella] (https://mindmarine.github.io/tictacttoe-isabella/)
+[Tic Tac Toe Isabella](https://mindmarine.github.io/tictactoe-isabella/)
 
 # Objective
 
