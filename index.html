@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Isabella's Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <style>
+
+
+      </style>
+    </head>
+    <body>
+
+    <!-- Start of the board -->
+    <div class="board">
+    <div class="row board-row">
+
+      <div class="col-4 square">
+        <div class="dashboard">
+          <h5 id="dashboard-title">Dashboard</h5>
+          <!-- <p class="kepp-loop">keeping you in the loop</p> -->
+          <h5 class="breaking news">BREAKING NEWS</h5>
+          <h2 id="status"></h2>
+        </div>
+
+        <!-- <div class="celebration">
+          <img id="winner-celebration" src="public/images/fireworks01.gif">
+        </div> -->
+
+        <!-- <div class="dashboard-start">
+          <img class="dashboard-image" src="/public/images/general_assembly_logo.jpeg" alt="General Assembly Logo" >
+          <p>SEI JuneBugs Project 1 Presentation</p>
+        </div> -->
+      </div>
+
+      <div class="col-4 square">
+        <!-- Game Title -->
+        <h1>Tic Tac Toe</h1>
+        <h6>for Isabella</h6>
+
+        <!-- Game Score -->
+        <div class="score">
+          <p id="x-player" class="score-details" >X Score: 0</p>
+          <p class="score-details" >&nbsp | &nbsp</p>
+          <p id="o-player" class="score-details" >O Score: 0</p>
+        </div>
+
+      </div>
+
+      <div class="col-4 square">
+        <!-- Sign Up -->
+        <!-- <h3>Sign Up</h3> -->
+        <form id="sign-up">
+          <!-- <label class="form-label">your username</label> -->
+          <input name="credentials[email]" type="text" value="your email" autocomplete="off">
+          <input name="credentials[password]" type="password" autocomplete="off">
+          <input name="credentials[password_confirmation]" type="password" autocomplete="off">
+          <input type="submit" value="Sign Up" class="nav-button">
+        </form>
+
+        <!-- Sign In -->
+        <!-- <h3>Sign In</h3> -->
+        <form id="sign-in">
+          <input name="credentials[email]" type="text" autocomplete="off">
+          <input name="credentials[password]" type="password" autocomplete="off">
+          <input type="submit" value="Sign In" class="nav-button">
+        </form>
+
+        <!-- Sign Out -->
+        <!-- <h3>Sign Out</h3> -->
+        <div id="support-sign-out">
+          <button id="sign-out" type="button" class="nav-button">Sign Out</button>
+        </div>
+
+        <!-- Change password -->
+        <!-- <h3>Change password</h3> -->
+        <form id="change-password">
+          <input style="width:100%" name="passwords[old]" type="password" autocomplete="off">
+          <input style="width:100%" name="passwords[new]" type="password" autocomplete="off">
+          <input type="submit" value="Change password" class="nav-button">
+        </form>
+
+        <!-- Game Actions -->
+
+        <!-- <h4>Get All Games</h4> -->
+        <div id="showcase-all-games">
+          <button id="all-games" type="button" class="nav-button">Get Games</button>
+        </div>
+
+
+        <!-- <h4>New Game</h4> -->
+        <div id="show-create-game">
+          <button id="create-game" type="button" class="nav-button">Start New Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row board-row">
+      <div data-cell-index="0" class="col-4 square game-cell"> <h6>0</h6></div>
+      <div data-cell-index="1" class="col-4 square game-cell"> 1 </div>
+      <div data-cell-index="2" class="col-4 square game-cell"> 2 </div>
+    </div>
+    <div class="row board-row">
+      <div data-cell-index="3" class="col-4 square game-cell"> 3 </div>
+      <div data-cell-index="4" class="col-4 square game-cell"> 4 </div>
+      <div data-cell-index="5" class="col-4 square game-cell"> 5 </div>
+    </div>
+    <div class="row board-row">
+      <div data-cell-index="6" class="col-4 square game-cell"> 6 </div>
+      <div data-cell-index="7" class="col-4 square game-cell"> 7 </div>
+      <div data-cell-index="8" class="col-4 square game-cell"> 8 </div>
+    </div>
+    </div>
+
+    </body>
+</html>
